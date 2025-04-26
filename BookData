@@ -92,3 +92,63 @@ public class Publication {
        
     }
 }
+
+output:
+
+Enter Book Details:
+Title: Fairy
+Author: Akshata
+Price: 500
+Stock Available: 200
+
+--- Book Management Menu ---
+1. Display Book Details
+2. Purchase Book
+3. Add More Stock
+4. Exit
+Enter your choice: 1
+
+Title: Fairy
+Author: Akshata
+Price: Rs.500.0
+Stock Available: 200
+
+--- Book Management Menu ---
+1. Display Book Details
+2. Purchase Book
+3. Add More Stock
+4. Exit
+Enter your choice: 2
+Enter quantity to purchase: 10
+10 book(s) purchased successfully!
+Total cost: Rs.5000.0
+
+--- Book Management Menu ---
+1. Display Book Details
+2. Purchase Book
+3. Add More Stock
+4. Exit
+Enter your choice: 3
+Enter quantity to add to stock: 50
+50 book(s) added to stock.
+
+--- Book Management Menu ---
+1. Display Book Details
+2. Purchase Book
+3. Add More Stock
+4. Exit
+Enter your choice: 1
+
+Title: Fairy
+Author: Akshata
+Price: Rs.500.0
+Stock Available: 240
+
+--- Book Management Menu ---
+1. Display Book Details
+2. Purchase Book
+3. Add More Stock
+4. Exit
+Enter your choice: 4
+Exiting program... Thank you!
+
