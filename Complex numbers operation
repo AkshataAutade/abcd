@@ -90,3 +90,22 @@ public class Complex {
         scanner.close(); 
     }
 }
+
+
+output:
+
+Enter first complex number:
+Real part: 25
+Imaginary part: 30
+
+Enter second complex number:
+Real part: 24
+Imaginary part: 36
+
+First Complex Number: 25.0 + 30.0i
+Second Complex Number: 24.0 + 36.0i
+
+Sum: 49.0 + 66.0i
+Difference: 1.0 - 6.0i
+Product: -480.0 + 1620.0i
+Quotient: 0.8974358974358975 - 0.09615384615384616i
