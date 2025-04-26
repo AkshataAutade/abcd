@@ -1,0 +1,94 @@
+package Data;  
+
+import java.util.Scanner;
+
+class Book {
+    String title;
+    String author;
+    double price;
+    int stock;  
+
+    public Book(String title, String author, double price, int stock) {
+        this.title = title;
+        this.author = author;
+        this.price = price;
+        this.stock = stock;
+    }
+
+    public void display() {
+        System.out.println("\nTitle: " + title);
+        System.out.println("Author: " + author);
+        System.out.println("Price: Rs." + price);
+        System.out.println("Stock Available: " + stock);
+    }
+
+  
+    public void purchase(int quantity) {
+        if (quantity <= stock) {
+            stock -= quantity;
+            System.out.println(quantity + " book(s) purchased successfully!");
+            System.out.println("Total cost: Rs." + (price * quantity));
+        } else {
+            System.out.println("Sorry, only " + stock + " books available!");
+        }
+    }
+
+   
+    public void restock(int quantity) {
+        stock += quantity;
+        System.out.println(quantity + " book(s) added to stock.");
+    }
+}
+
+public class Publication {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter Book Details:");
+        System.out.print("Title: ");
+        String title = scanner.nextLine();
+        System.out.print("Author: ");
+        String author = scanner.nextLine();
+        System.out.print("Price: ");
+        double price = scanner.nextDouble();
+        System.out.print("Stock Available: ");
+        int stock = scanner.nextInt();
+
+      
+        Book book = new Book(title, author, price, stock);
+
+        int choice;
+        do {
+            System.out.println("\n--- Book Management Menu ---");
+            System.out.println("1. Display Book Details");
+            System.out.println("2. Purchase Book");
+            System.out.println("3. Add More Stock");
+            System.out.println("4. Exit");
+            System.out.print("Enter your choice: ");
+            choice = scanner.nextInt();
+
+            switch (choice) {
+                case 1:
+                    book.display();
+                    break;
+                case 2:
+                    System.out.print("Enter quantity to purchase: ");
+                    int qtyPurchase = scanner.nextInt();
+                    book.purchase(qtyPurchase);
+                    break;
+                case 3:
+                    System.out.print("Enter quantity to add to stock: ");
+                    int qtyRestock = scanner.nextInt();
+                    book.restock(qtyRestock);
+                    break;
+                case 4:
+                    System.out.println("Exiting program... Thank you!");
+                    break;
+                default:
+                    System.out.println("Invalid choice. Try again.");
+            }
+        } while (choice != 4);
+
+       
+    }
+}
